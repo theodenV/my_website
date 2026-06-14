@@ -54,7 +54,7 @@
             die("input all parametrs");
         }
         $sql = "INSERT INTO users (username, email, pass)
-            VALUES ('$login', '$email', '$pass')";
+            VALUES ('$username', '$email', '$pass')";
         
         if (!mysqli_query($link, $sql)) {
             echo "Error insert". mysqli_error($link);
@@ -63,4 +63,5 @@
             exit();
         }
     }
+    mysqli_close($link);
 ?>

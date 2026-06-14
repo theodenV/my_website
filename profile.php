@@ -1,3 +1,11 @@
+<?php
+    if (!isset($_COOKIE["User"])) {
+        header("Location: /index.php");
+        exit();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,10 +21,10 @@
             <a class="navbar-brand fw-bold" href="#">Мой сайт</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Профиль</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Посты</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Написать пост</a></li>
-                    <li class="nav-item"><a class="nav-link text-danger" href="#">Выйти</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/profile.php">Профиль</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/posts.php">Посты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/publish.php">Написать пост</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="/logout.php">Выйти</a></li>
                 </ul>
             </div>
         </div>
