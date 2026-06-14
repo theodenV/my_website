@@ -38,6 +38,7 @@
                     echo '<div class="card shadow-sm mb-4"><div class="card-body">';
                     echo '<h4 class="card-title text-primary">' . $row["title"] . '</h4>';
                     echo '<p class="card-text text-muted">' . $row["main_text"] . '</p>';
+                    echo '<img src="/upload/' . $row["filename"] . '" class="img-fluid rounded-circle" style="width: 180px; height: 180px; object-fit: cover;">';
                     echo '</div></div>';
                 } else {
                     echo "<h2 class='mb-4'>Все посты</h2>";
@@ -48,6 +49,7 @@
                             echo '<div class="card shadow-sm mb-4"><div class="card-body">';
                             echo '<h4 class="card-title text-primary">' . $row["title"] . '</h4>';
                             echo '<p class="card-text text-muted">' . $row["main_text"] . '</p>';
+                            echo '<img src="/upload/' . $row["filename"] . '" class="img-fluid rounded-circle" style="width: 180px; height: 180px; object-fit: cover;">';
                             echo '</div></div>';
                         }
                     } else {

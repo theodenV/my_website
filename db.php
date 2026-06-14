@@ -35,7 +35,8 @@ if (!mysqli_query($link, $sql)) {
 $sql = "CREATE TABLE IF NOT EXISTS posts(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
-    main_text VARCHAR(500) NOT NULL
+    main_text VARCHAR(500) NOT NULL,
+    filename VARCHAR(500) NULL
 )";
 if (!mysqli_query($link, $sql)) {
     echo "". mysqli_error($link);

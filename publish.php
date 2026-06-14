@@ -75,6 +75,7 @@
             die("input all parametrs");
         }
 
+        $filename = "";
         echo var_dump($_FILES["file"]);
         if(!empty($_FILES["file"])) {
             echo "file is here";
@@ -93,8 +94,8 @@
                 echo "upload failed!";
             }
         }
-        $sql = "INSERT INTO posts (title, main_text)
-            VALUES ('$title', '$main_text')";
+        $sql = "INSERT INTO posts (title, main_text, filename)
+            VALUES ('$title', '$main_text', '$filename')";
         
         if (!mysqli_query($link, $sql)) {
             echo "Error insert". mysqli_error($link);
